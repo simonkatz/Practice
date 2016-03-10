@@ -14,9 +14,9 @@ use DatabaseTransactions;
 		factory(Article::class)->create(['reads' => 10]);
 		$most_popular = factory(Article::class)->create(['reads' => 20]);
 		
-		$article = Article::trending();
+		$articles = Article::trending();
 
-		$this->assertEquals($most_popular->id, $article->first()->id);
-		$this->assertCount(4, )
+		$this->assertEquals($most_popular->id, $articles->first()->id);
+		$this->assertCount(4, $articles);
 	}
 }
