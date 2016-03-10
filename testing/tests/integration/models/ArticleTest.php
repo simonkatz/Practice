@@ -17,6 +17,6 @@ use DatabaseTransactions;
 		$articles = Article::trending();
 
 		$this->assertEquals($most_popular->id, $articles->first()->id);
-		$this->assertCount(4, $articles);
+		$this->assertCount(3, $articles);
 	}
 }
